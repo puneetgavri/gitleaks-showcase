@@ -23,6 +23,7 @@ COPY --from=backend-builder /usr/local/lib/python3.9/site-packages/ /usr/local/l
 
 # Copy the application code from the backend-builder stage
 COPY --from=backend-builder /app /app
+ENV AWS_ACCESS_KEY AKIAIOSFODNN734WER3
 
 # Expose port 5000 for the Flask application
 EXPOSE 5000
